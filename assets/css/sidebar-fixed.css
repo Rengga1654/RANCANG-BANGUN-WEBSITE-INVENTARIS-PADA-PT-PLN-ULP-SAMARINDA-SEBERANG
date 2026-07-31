@@ -1,0 +1,138 @@
+/* HANYA UNTUK WARNA SIDEBAR */
+.sidebar {
+    background-color: #343a40;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 260px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.sidebar.toggled {
+    display: none;
+}
+
+.sidebar a {
+    color: white;
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.sidebar a:hover {
+    background-color: #007bff;
+}
+
+.sidebar a.active {
+    background-color: #007bff;
+}
+
+/* DROPDOWN / ACCORDION SIDEBAR */
+.sidebar .dropdown-btn {
+    cursor: pointer;
+    user-select: none;
+    padding: 10px 15px;
+    display: block;
+    color: white;
+    transition: all 0.2s ease;
+}
+
+.sidebar .dropdown-btn:hover {
+    background-color: #007bff;
+}
+
+.sidebar .dropdown-btn i {
+    margin-right: 10px;
+    width: 20px;
+}
+
+.sidebar .dropdown-btn .fa-caret-down {
+    float: right;
+    margin-top: 5px;
+    transition: transform 0.3s ease;
+}
+
+.sidebar .dropdown-btn .fa-caret-down.rotate {
+    transform: rotate(180deg);
+}
+
+.sidebar .dropdown-container {
+    display: none;
+    background-color: #2c3136;
+    padding-left: 35px;
+}
+
+.sidebar .dropdown-container a {
+    padding: 8px 15px;
+    font-size: 13px;
+}
+
+.sidebar .dropdown-container a:hover {
+    background-color: #007bff;
+}
+
+.sidebar .dropdown-container a.active {
+    background-color: #007bff;
+}
+
+/* NAVBAR */
+.sb-topnav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1039;
+    background-color: #103752 !important;
+    height: 56px;
+}
+
+/* CONTENT */
+.content {
+    margin-left: 260px;
+    margin-top: 56px;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.sidebar.toggled + .content {
+    margin-left: 0;
+}
+
+/* Tombol toggle */
+#sidebarToggle {
+    color: white;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#sidebarToggle:hover {
+    color: #007bff;
+}
+
+/* Tabel responsive */
+.table-responsive {
+    overflow-x: auto;
+}
+
+/* Card */
+.card {
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.card-stats {
+    min-height: 130px;
+}
+
+.card-stats .stats-number {
+    font-size: 24px; /* sedikit kecilkan */
+}
+
+.card-stats .card-body > div:first-child {
+    min-width: 150px; /* beri lebar minimum */
+}

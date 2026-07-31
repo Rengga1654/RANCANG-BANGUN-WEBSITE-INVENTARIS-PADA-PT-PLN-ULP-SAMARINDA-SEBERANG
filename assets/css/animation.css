@@ -1,0 +1,93 @@
+/* animation.css */
+
+/* Transisi untuk semua elemen */
+* {
+    transition: all 0.2s ease-in-out;
+}
+
+/* Animasi sidebar menu */
+.sidebar a {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sidebar a:hover {
+    background-color: #007bff;
+    padding-left: 25px;
+    letter-spacing: 0.5px;
+}
+
+/* Animasi tombol */
+.btn {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* Animasi card */
+.card {
+    animation: slideUp 0.4s ease-out;
+    transition: box-shadow 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animasi tabel */
+.table tbody tr {
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.table tbody tr:hover {
+    background-color: #e9ecef;
+    transform: scale(1.01);
+}
+
+/* Animasi modal */
+.modal.fade .modal-dialog {
+    transition: transform 0.3s ease-out;
+}
+
+/* Animasi alert */
+.alert {
+    animation: slideInRight 0.3s ease;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Loading spinner */
+.spinner-border {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
